@@ -1,5 +1,5 @@
 /*
- * dscltable.js for jQuery - v0.1
+ * dscltable.js for jQuery - v1.0
  * http://dosancole.github.com/dscltable/
  *
  * Copyright (c) 2013- takuya Dosancole.
@@ -49,21 +49,6 @@
 			pages : 1,
 			empty : true
 		}, p);
-
-		// モデルのパラメタ化
-		$.each(p.model, function(i, m) {
-			var splited = m.name.split('_');
-			var a = '';
-			$.each(splited, function(i, s) {
-				if (i == 0) {
-					a += s;
-				} else {
-					a += s.charAt(0).toUpperCase();
-					a += s.substring(1, s.length);
-				}
-			});
-			m.param = a;
-		});
 
 		// -----------------------------
 		// create table class.
@@ -166,7 +151,7 @@
 				p.mytable.append(html);
 				html=null;
 
-				//データヒモ付
+				//data binding
                 var rowLength = 0;
                 if(data) {
                     rowLength = data.rows.length;
@@ -312,7 +297,7 @@
                     p.newp = 1;
                 }
 
-                // 一つ目のパラメタがpageであることを前提としている箇所あり。
+                // first parameter is [page].
                 var param = [{
                     name : 'page',
                     value : p.newp
@@ -328,8 +313,6 @@
                 if(p.userParam) {
                     $.each(p.userParam, function(k, v) {
                         if(k == 'page' && userParam) {
-                            // 明示的ロードで、pageパラメタがわたされた場合
-                            // 元のpageパラメタを削除
                             param.splice(0, 1);
                             p.newp = v;
                         }
@@ -349,7 +332,6 @@
                     dataType : 'json',
                     success : function(data) {
                         if(data.error != null && data.error.length > 0) {
-                            // todo 業務エラー時処理
                             p.empty = true;
                             table.createEmptyTable(data.error);
                         } else {
@@ -512,12 +494,7 @@
 
         if( p.onReady ){
         	if( p.pager && p.pagerLoadingImage ){
-        		//table.updatePageStatus( true );
-            	// loading画像読み込み後にCALL
-            	//$('<img/>').attr('src',$('#dscltable .pPage img').attr('src')).load(function(){
-                //    $(this).remove();
-                    p.onReady();
-            	//});
+                p.onReady();
         	}else{
         		p.onReady();
         	}
