@@ -332,6 +332,7 @@
                     url : p.url,
                     data : param,
                     dataType : 'json',
+                    cache: false,
                     success : function(data) {
                         if(data.error != null && data.error.length > 0) {
                             p.empty = true;
