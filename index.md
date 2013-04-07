@@ -3,7 +3,7 @@ layout: default
 title: dscltable.js - 簡易jQueryテーブル
 ---
 
-Japanese  / [English](index_en.html)
+Japanese  / English(under construction)
 
 
 Features
