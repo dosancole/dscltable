@@ -1,8 +1,4 @@
-table.table tr.datarow:hover {
-	background-color: #f0f0f0;
-	text-decoration: underline;
-}
-table.table tr.rowselect,table.table tr.rowselect:hover {
+table.table tr.rowselect {
 	background-color: #ddf;
 }
 table.pager tr{
