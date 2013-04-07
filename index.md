@@ -32,6 +32,27 @@ Sample View
 表頭・表側を固定し、ajaxによるサーバ取得、ページャ、3段の多段ソート、行選択の
 例です。（サーバが出力するデータは静的なもので、ページャやソートは動作しません^^;）
 
+<script type="text/javascript">
+		$(function(){
+		    $('#sampleview').dscltable({
+		        url: 'sampleview.json',
+		        tableClass : 'borderd',
+		        onReady : function(){
+				    $('#sampleview').dscltableLoad();
+		        },
+		        model : [
+		            {display: 'user name', tdClass:'user' },
+		            {display: 'id', tdClass:'data' },
+		            {display: 'address',    tdClass:'data' },
+		            {display: 'age',    tdClass:'data' },
+		            {display: 'comment',    tdClass:'data' }
+		        ]
+		    });
+		});
+</script>
+<div id="sampleview"></div>
+
+
 Change Log
 -----
 
