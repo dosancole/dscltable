@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="../../web/js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="../../web/js/dscltable.js" ></script>
+	<title>dscltable.js sample 000</title>
+	<script type="text/javascript">
+		$(function(){
+		    $('#table').dscltable({
+		        url: 'data.json',
+		        tableClass : 'borderd',
+		        onReady : function(){
+				    $('#table').dscltableLoad();
+		        },
+		        model : [
+		            {display: 'user name', tdClass:'user' },
+		            {display: 'id', tdClass:'data' },
+		            {display: 'address',    tdClass:'data' },
+		            {display: 'age',    tdClass:'data' },
+		            {display: 'comment',    tdClass:'data' }
+		        ]
+		    });
+		});
+	</script>
+    <style type="text/css">
+		body { font: 14px Helvetica,arial,freesans,clean,sans-serif !important; }
+		table.borderd { border: 1px solid #aaa;border-spacing: 0px 0px !important;border-collapse: collapse !important;}
+		table.borderd th { border: 1px solid #aaa; padding: 5px 10px 5px 10px;}
+		table.borderd td { border: 1px solid #aaa; padding: 5px 10px 5px 10px;}
+		th { color: #fff; background-color: #666;}
+		td.user { text-align: left; color: red; }
+		td.data { text-align: center; }
+		tr.even { background-color: #eee; }
+    </style>
+</head>
+<body>
+	<div id="table"></div>
+</body>
+</html>
