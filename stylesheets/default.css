@@ -1,0 +1,20 @@
+table.table tr.datarow:hover {
+	background-color: #f0f0f0;
+	text-decoration: underline;
+}
+table.table tr.rowselect,table.table tr.rowselect:hover {
+	background-color: #ddf;
+}
+table.pager tr{
+	border-top: 1px solid #e0e0e0;
+}
+table.pager td{
+	border: 0px;
+}
+table.pager .enabled {
+	text-decoration: underline;
+	cursor: pointer;
+}
+table.pager .disabled {
+	color: #e0e0e0;
+}
