@@ -23,6 +23,8 @@
 			tableClass : "",
 			tableLoadingImage : false,
 			pager : false,
+			pagerPrevText: "<prev",
+			pagerNextText: "next>",
 			pagerClass : "",
 	        pagerPrevClass : "",
 	        pagerNextClass : "",
@@ -228,9 +230,9 @@
             createPager : function() {
                 p.mypager.empty();
                 p.mypager.html(
-                		'<tr><td style="text-align:left;"><a class="pPrev '+ p.pagerPrevClass +'">前へ</a></td>'+
+                		'<tr><td style="text-align:left;"><a class="pPrev '+ p.pagerPrevClass +'">'+p.pagerPrevText+'</a></td>'+
                 		'<td style="text-align:center;"><span class="pPage '+ p.pagerPageClass +'">- / -</span></td>'+
-                		'<td style="text-align:right;"><a class="pNext '+ p.pagerPrevClass +'">次へ</a></td></tr>'
+                		'<td style="text-align:right;"><a class="pNext '+ p.pagerPrevClass +'">'+p.pagerNextText+'</a></td></tr>'
                 		);
                 $('.pPrev', p.mypager).click(function() {
                     table.changePage('prev')
