@@ -35,8 +35,10 @@ Sample View
 <script type="text/javascript">
 		$(function(){
 		    $('#sampleview').dscltable({
+		    	method: 'GET',
 		        url: 'sampleview.json',
 		        tableClass : 'borderd',
+		        pager: true,
 		        onReady : function(){
 				    $('#sampleview').dscltableLoad();
 		        },
