@@ -21,11 +21,13 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:48px;
+  text-shadow: 2px 2px 3px gray;
 }
 
 h2 {
   color:#393939;
+  border-bottom:1px solid #ccc;
 }
 
 h3, h4, h5, h6 {

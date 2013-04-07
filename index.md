@@ -3,9 +3,6 @@ layout: default
 title: dscltable.js - 簡易jQueryテーブル
 ---
 
-dscltable.jsは最低限の機能を持つ簡易的なjQueryテーブルです。  
-dscltable.js is a limited-functional table for jQuery.
-
 Japanese  / [English](index_en.html)
 
 
@@ -14,8 +11,8 @@ Features
 
 業務系Webアプリケーションの開発では、表を表現したいシーンがよくあります。
 またスマートフォンで業務系Webアプリケーションを使うシーンも増えてきました。
-モバイルサイトやPCサイトに限定せず、軽量で容易に扱えるテーブルが求められています。
-dscltable.jsは、業務系Webアプリケーションでの利用を想定した以下の機能を持つ簡易的なテーブルです。
+dscltable.jsは、モバイルサイトやPCサイトに限定せず軽量で容易に扱える
+以下の機能を持つjqueryテーブルです。
 
 
 *   列の縦表示切替（横幅の制限されるスマートフォンでの利用を想定）
@@ -23,8 +20,6 @@ dscltable.jsは、業務系Webアプリケーションでの利用を想定し�
 *   簡易ページャ
 *   行選択
 
-
-※dsclgridのdsclはアカウント名(dosancole)の略字をあてています。読めなくてごめんなさい^^;
 
 Sample View
 -----
