@@ -6,28 +6,32 @@
     <script type="text/javascript" src="../../web/js/dscltable.js" ></script>
 	<title>dscltable.js sample 000</title>
 	<script type="text/javascript">
-$(function(){
-    $('#table').dscltable({
-        url: 'data.json',
-        tableClass : 'borderd',
-        model : [
-            {display: 'ユーザ名', tdClass:'user' },
-            {display: '管理番号', tdClass:'data' },
-            {display: '住所',    tdClass:'data' },
-            {display: '年齢',    tdClass:'data' },
-            {display: '備考',    tdClass:'data' }
-        ]
-    });
-    $('#table').dscltableLoad();
-});
+		$(function(){
+		    $('#table').dscltable({
+		        url: 'data.json',
+		        tableClass : 'borderd',
+		        onReady : function(){
+				    $('#table').dscltableLoad();
+		        },
+		        model : [
+		            {display: 'user name', tdClass:'user' },
+		            {display: 'id', tdClass:'data' },
+		            {display: 'address',    tdClass:'data' },
+		            {display: 'age',    tdClass:'data' },
+		            {display: 'comment',    tdClass:'data' }
+		        ]
+		    });
+		});
 	</script>
     <style type="text/css">
-body { font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka-等幅", monospace; }
-table.borderd { border: 1px solid #aaa; margin: 0px; padding: 0px;}
-th { color: #fff; background-color: #999; }
-td.user { text-align: left; color: red; }
-td.data { text-align: center; }
-tr.even { background-color: #ccc; }
+		body { font: 14px Helvetica,arial,freesans,clean,sans-serif !important; }
+		table.borderd { border: 1px solid #aaa;border-spacing: 0px 0px !important;border-collapse: collapse !important;}
+		table.borderd th { border: 1px solid #aaa; padding: 5px 10px 5px 10px;}
+		table.borderd td { border: 1px solid #aaa; padding: 5px 10px 5px 10px;}
+		th { color: #fff; background-color: #666;}
+		td.user { text-align: left; color: red; }
+		td.data { text-align: center; }
+		tr.even { background-color: #eee; }
     </style>
 </head>
 <body>
