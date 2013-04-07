@@ -37,8 +37,18 @@ Sample View
 		    $('#sampleview').dscltable({
 		    	method: 'GET',
 		        url: 'sampleview.json',
-		        tableClass : 'borderd',
+		        selectable : true,
+				selectableRadio : true,
+				selectableRadioTH : "",
+				tableLoadingImage : 'stylesheets/indicator.gif',
+		        tableClass : 'table',
 		        pager: true,
+       	        pagerLoadingImage : 'stylesheets/indicator.gif',
+		        pagerClass : 'pager',
+		        pagerPrevClass : "enabled",
+		        pagerNextClass : "enabled",
+		        pagerPrevDisableClass : "disabled",
+		        pagerNextDisableClass : "disabled",
 		        onReady : function(){
 				    $('#sampleview').dscltableLoad();
 		        },
