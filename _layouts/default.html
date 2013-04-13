@@ -14,30 +14,45 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    <!-- common -->
     <script type="text/javascript">
-(function(w,d){
-    w._gaq=[["_setAccount","UA-33920795-2"],["_trackPageview"]];
-    w.___gcfg={lang:"ja"};
-    var s,e = d.getElementsByTagName("script")[0],
-    a=function(u,f){if(!d.getElementById(f)){s=d.createElement("script");
-    s.src=u;if(f){s.id=f;}e.parentNode.insertBefore(s,e);}};
-    a(("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js","ga");
-    a("https://apis.google.com/js/plusone.js");
-    a("//b.st-hatena.com/js/bookmark_button_wo_al.js");
-    a("//platform.twitter.com/widgets.js","twitter-wjs");
-    a("//connect.facebook.net/ja_JP/all.js#xfbml=1","facebook-jssdk");
-})(this, document);
+	(function(w,d){
+	    w.___gcfg={lang:"ja"};
+	    var s,e = d.getElementsByTagName("script")[0],
+	    a=function(u,f){if(!d.getElementById(f)){s=d.createElement("script");
+	    s.src=u;if(f){s.id=f;}e.parentNode.insertBefore(s,e);}};
+	    a("https://apis.google.com/js/plusone.js");
+	    a("//b.st-hatena.com/js/bookmark_button_wo_al.js");
+	    a("//platform.twitter.com/widgets.js","twitter-wjs");
+	})(this, document);
     </script>
   </head>
   <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=418371971537757";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>    <div class="wrapper">
+	<!-- google analytics -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-33920795-2']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+	<!-- facebook like -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=418371971537757";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="wrapper">
       <header>
         <h1>dscltable.js</h1>
         <p>
@@ -53,31 +68,35 @@
           <li><a href="https://github.com/dosancole/dscltable">View On <strong>GitHub</strong></a></li>
         </ul>
 
-<div class="social">
-    <!-- Twitter -->
-    <a href="https://twitter.com/share" class="twitter-share-button"
-    data-lang="ja"
-    data-url="http://www.dosancole.com/dscltable/"
-    data-text="このエントリーをツィートする"
-    data-via="me"
-    ></a><br/>
-    <!-- Google plusone -->
-    <g:plusone size="medium" href="http://www.dosancole.com/dscltable/"></g:plusone><br/>
-    <!-- Hatena -->
-    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button"
-    data-hatena-bookmark-layout="standard"
-    data-hatena-bookmark-url="http://www.dosancole.com/dscltable/index.html">
-    <img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
-        alt="このエントリーをはてなブックマークに追加" width="20" height="20"
-        style="border: none">
-    </a><br/>
-    <!-- Facebook -->
-	<div class="fb-like" data-href="http://www.dosancole.com/dscltable/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></div>
+		<div class="social">
+		    <!-- Twitter -->
+		    <a href="https://twitter.com/share" class="twitter-share-button"
+		    data-lang="ja"
+		    data-url="http://www.dosancole.com/dscltable/"
+		    data-text="このエントリーをツィートする"
+		    data-via="me"
+		    ></a><br/>
+		    <!-- Google plusone -->
+		    <g:plusone size="medium" href="http://www.dosancole.com/dscltable/"></g:plusone><br/>
+		    <!-- Hatena -->
+		    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button"
+		    data-hatena-bookmark-layout="standard"
+		    data-hatena-bookmark-url="http://www.dosancole.com/dscltable/">
+		    <img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+		        alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+		        style="border: none">
+		    </a><br/>
+		    <!-- Facebook Like -->
+			<div class="fb-like" data-href="http://www.dosancole.com/dscltable/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
+		</div>
 
       </header>
       <section>
 {{ content }}
-<div class="fb-comments" data-href="http://www.dosancole.com/dscltable/" data-width="500" data-num-posts="10"></div>      </section>
+    <!-- Facebook Comment -->
+	<div class="fb-comments" data-href="http://www.dosancole.com/dscltable/" data-width="500" data-num-posts="10"></div>
+
+      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/dosancole">dosancole</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
