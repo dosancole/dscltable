@@ -1,6 +1,6 @@
 /*
  * dscltable.js for jQuery - v1.0
- * http://dosancole.github.io/dscltable/
+ * http://www.dosancole.com/dscltable/
  *
  * Copyright (c) 2013- takuya Dosancole.
  * Dual licensed under the MIT or GPL Version 2 licenses.
