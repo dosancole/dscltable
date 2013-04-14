@@ -333,6 +333,29 @@ ajaxでサーバに送信されるパラメータを取得します。
 
     var userParam = $(xxx).dscltableGetUserParam(); // ex. [{name:'page',value:2},{name:'rp',value:30},...]
 
+CSS Selector
+-----
+
+dscltable.jsはcssを含まず、主にパラメタで与えたクラスによりデザインされます。
+CSSセレクタの例を以下に示します。{xxx}はパラメタで与えるものです。
+
+|CSSセレクタ|説明|
+|---|---|
+|table.{tableClass}|表のtable要素のクラス。パラメタtableClass。|
+|th|テーブルのヘッダセル。クラスなし|
+|tr.datarow|テーブルのデータ行のtr要素のクラス。|
+|tr.even|テーブルのデータ行のtr要素の偶数行のクラス。|
+|tr.{cl}|テーブルのデータ行のtr要素のクラス。サーバのjsonにおけるcl。|
+|tr.{selectRowClass}|テーブルの選択されたデータ行のtr要素のクラス。パラメタselectRowClass。|
+|td.{tdClass}|テーブルのデータセルのtd要素のクラス。パラメタmodelのtdClass。|
+|table.{pagerClass}|ページャのtable要素のクラス。パラメタpagerClass。|
+|a.pPrev|ページャの前リンクのクラス。|
+|a.pNext|ページャの次リンクのクラス。|
+|a.{pagerPrevClass}|ページャの前リンク活性時のクラス。パラメタpagerPrevClass。|
+|a.{pagerNextClass}|ページャの次リンク活性時のクラス。パラメタpagerNextClass。|
+|a.{pagerPrevDisableClass}|ページャの次リンク非活性時のクラス。パラメタpagerPrevDisableClass。|
+|a.{pagerNextDisableClass}|ページャの次リンク非活性時のCSSクラス。パラメタpagerNextDisableClass。|
+|span.{pagerPageClass}|ページャのページ表示部のspan要素のクラス。パラメタpageragerPageClass。|
 
 License
 -----
