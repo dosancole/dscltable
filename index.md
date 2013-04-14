@@ -132,6 +132,25 @@ Quick Start
 	</body>
 	</html>
 
+次にサーバ相当のJSONを返却する data.json を用意します（簡単のために固定のものです）。
+
+	{
+		"offset" : 0,
+		"page"   : 1,
+		"rows"   : [
+			{ "cell" : ["sato",     "0001","tokyo Japan",    "20", "comment."] },
+			{ "cell" : ["suzuki",   "0002","hokkaido Japan", "45", "comment."] },
+			{ "cell" : ["takahashi","0003","okinawa Japan",  "25", "comment."] },
+			{ "cell" : ["tanaka",   "0004","kanagawa Japan", "35", "comment."] },
+			{ "cell" : ["watanabe", "0005","osaka Japan",    "30", "comment."] },
+		],
+		"total"  : 2
+	}
+
+以下が表示できます。
+※ローカル環境のchromeで確認する場合、```--allow-file-access-from-files```オプションで起動する必要があります。
+
+
 License
 -----
 Copyright &copy; 2013 [takuya Dosancole].
