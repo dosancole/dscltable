@@ -378,12 +378,14 @@
             	if( loading ){
             		table.updatePageStatus( true );
             		if(p.tableLoadingImage){
-	            		p.myloading.css({
-	            			position: "absolute",
-	            			top: (p.mytable.position().top+5) +"px",
-	            			left: (p.mytable.position().left+5) +"px"
-	            		});
-	            		p.myloading.show();
+            			if( p.mytable.position().top != 0 || p.mytable.position().left != 0 ){
+		            		p.myloading.css({
+		            			position: "absolute",
+		            			top: (p.mytable.position().top+5) +"px",
+		            			left: (p.mytable.position().left+5) +"px"
+		            		});
+		            		p.myloading.show();
+            			}
             		}
             	}else{
             		if(p.tableLoadingImage){
